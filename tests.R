@@ -33,5 +33,6 @@ chitest <- function(data, dep, indep, sig=0.05)
   data[indep] <- as.factor(data[indep])
   chistat <- chisq.test(data[dep], data[indep], correct=FALSE)
   return(chistat$p.value)
+  
 }
 
